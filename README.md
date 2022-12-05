@@ -3,4 +3,5 @@
 - React JS
 - Tailwind CSS
 
+##### _Not fully responsive yet._
 Basically it is an online cloth selling platform.
