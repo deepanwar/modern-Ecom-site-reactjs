@@ -1,5 +1,9 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
+import { fadeIn } from "../../utils/motion";
+
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
@@ -11,13 +15,37 @@ const category = ["Hoodies", "Sweatshirts", "Shirts", "T-Shirts", "Jackets"];
 const company = ["About", "Blog", "Contact", "Guarantee", "Shipping"];
 const support = ["Style Guide", "Licensing", "Change log", "Instructions"];
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      // delayChildren: 1.5,
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+
+const item = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -10 },
+};
+
 const Footer = () => {
   return (
     <div className="bg-[#1a1a1a] relative z-[2] py-[170px]">
-    <InfiniteBanner/>
+      <InfiniteBanner />
       {/* mean content */}
       <div className=" px-[14px] max-w-[1350px] mx-auto mt-[200px] relative z-[2]">
-        <div className="relative z-2 w-full">
+        <motion.div
+          className="relative z-2 w-full"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={fadeIn({ direction: "up", duration: 0.5 })}
+        >
           <div className="grid grid-cols-[2.5fr_1fr_1fr_1fr_0.5fr] gap-x-16 ">
             <div className="relative">
               <h3 className="text-4xl text-white font-archivoExpandedLight">
@@ -37,39 +65,69 @@ const Footer = () => {
               <h1 className="text-white font-archivoExpandedMedium uppercase mb-4 ">
                 Categories
               </h1>
-              <ul className="text-[#888888] font-archivoExpandedRegular space-y-2">
+              <motion.ul
+                className="text-[#888888] font-archivoExpandedRegular space-y-2"
+                initial="hidden"
+                whileInView="visible"
+                variants={list}
+                viewport={{ once: true, amount: 0.25 }}
+              >
                 {category.map((element, i) => (
-                  <li key={i} className="hover:text-white cursor-pointer">
+                  <motion.li
+                    key={i}
+                    className="hover:text-white cursor-pointer"
+                    variants={item}
+                  >
                     {element}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </div>
 
             <div>
               <h1 className="text-white font-archivoExpandedMedium uppercase mb-4">
                 Company
               </h1>
-              <ul className="text-[#888888] font-archivoExpandedRegular space-y-2">
+              <motion.ul
+                className="text-[#888888] font-archivoExpandedRegular space-y-2"
+                initial="hidden"
+                whileInView="visible"
+                variants={list}
+                viewport={{ once: true, amount: 0.25 }}
+              >
                 {company.map((element, i) => (
-                  <li key={i} className="hover:text-white cursor-pointer">
+                  <motion.li
+                    key={i}
+                    className="hover:text-white cursor-pointer"
+                    variants={item}
+                  >
                     {element}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </div>
 
             <div>
               <h1 className="text-white font-archivoExpandedMedium uppercase mb-4">
                 Support
               </h1>
-              <ul className="text-[#888888] font-archivoExpandedRegular space-y-2">
+              <motion.ul
+                className="text-[#888888] font-archivoExpandedRegular space-y-2"
+                initial="hidden"
+                whileInView="visible"
+                variants={list}
+                viewport={{ once: true, amount: 0.25 }}
+              >
                 {support.map((element, i) => (
-                  <li key={i} className="hover:text-white cursor-pointer">
+                  <motion.li
+                    key={i}
+                    className="hover:text-white cursor-pointer"
+                    variants={item}
+                  >
                     {element}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </div>
             <div className="pt-9 hover space-y-3">
               <FaFacebook
@@ -90,7 +148,7 @@ const Footer = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* background image */}
