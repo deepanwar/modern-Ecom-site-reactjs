@@ -35,7 +35,7 @@ const item = {
 
 const Footer = () => {
   return (
-    <div className="bg-[#1a1a1a] relative z-[2] py-[170px]">
+    <div className="bg-[#1a1a1a] relative z-[2] md:py-[170px] py-[100px]">
       <InfiniteBanner />
       {/* mean content */}
       <div className=" px-[14px] max-w-[1350px] mx-auto mt-[200px] relative z-[2]">
@@ -46,9 +46,9 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.25 }}
           variants={fadeIn({ direction: "up", duration: 0.5 })}
         >
-          <div className="grid grid-cols-[2.5fr_1fr_1fr_1fr_0.5fr] gap-x-16 ">
-            <div className="relative">
-              <h3 className="text-4xl text-white font-archivoExpandedLight">
+          <div className="grid md:grid-cols-[2.5fr_1fr_1fr_1fr_0.5fr] grid-cols-2 gap-x-16 gap-y-10 ">
+            <div className="relative col-span-2 md:col-span-1 pr-10">
+              <h3 className="text-2xl sm:text-4xl text-white font-archivoExpandedLight">
                 Find out about the sales at your local shop
               </h3>
               <button className="uppercase mt-12 border-2 border-white hover:border-[#BF8C4E] transition ease-in duration-400 hover:text-[#BF8C4E] rounded-md px-8 py-2 text-white font-archivoExpandedLight text-sm ">
@@ -152,7 +152,8 @@ const Footer = () => {
       </div>
 
       {/* background image */}
-      <div className="absolute  inset-0 w-[35%] opacity-20 bg-auto z-[1]">
+      <div className="absolute  inset-0 md:w-[35%] w-full md:h-auto h-[400px]  opacity-20 bg-auto z-[1]">
+        <div className="absolute bottom-0 w-full h-[200px] bg-gradient-to-b from-transparent to-[#1a1a1a]" />
         <img src={clothsImage} alt="clothsImage" className="h-full w-full" />
       </div>
     </div>

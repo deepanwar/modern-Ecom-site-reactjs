@@ -31,9 +31,9 @@ export default InfiniteBanner;
 
 const SlideCard = ({ red }) => (
   <div
-    className={`flex place-items-center space-x-4 ${red ? "bg-red-400" : null}`}
+    className={`flex place-items-center space-x-4 py-1 ${red ? "bg-red-400" : null}`}
   >
-    <div className="h-12 aspect-square p-2 border-2 border-[#1a1a1a]">
+    <div className= "h-12 aspect-square p-2 border-2 border-[#1a1a1a]">
       <img src={markSimple} alt="markSimple" className="h-full w-full" />
     </div>
     <div className="h-2 aspect-square rounded-full bg-[#1a1a1a]" />

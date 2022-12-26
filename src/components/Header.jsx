@@ -27,7 +27,7 @@ const Header = ({ headerOpen, handleNav }) => {
   // console.log(headerOpen);
   return (
     <>
-      <div className={`w-full  fixed ${cls} left-0 px-10 z-50`}>
+      <div className={`w-full  fixed ${cls} left-0 md:px-10 px-4 z-50`}>
         <div className="h-[70px] max-w-[1350px] mx-auto flex justify-between items-center">
           {/* left side */}
 

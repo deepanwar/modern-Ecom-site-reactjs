@@ -9,16 +9,16 @@ import { motion } from "framer-motion";
 const FindOut = () => {
   return (
     <div className="bg-[#1A1A1A]">
-      <div className="max-w-[1350px] mx-auto px-7 py-12 ">
+      <div className="max-w-[1350px] mx-auto md:px-6 px-4 py-12 ">
         <motion.div
-          className="grid md:grid-cols-6 grid-cols-1 gap-7 py-[170px]"
+          className="grid md:grid-cols-6 grid-cols-1 gap-7  py-[170px]"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
           variants={fadeIn({ direction: "up", duration: 0.5 })}
         >
           {/* left */}
-          <div className="col-span-2 flex items-center justify-center ">
+          <div className="md:col-span-2 flex items-center justify-start md:justify-center ">
             <div className="h-[170px] aspect-square relative flex">
               <img
                 src={circleText}
@@ -56,8 +56,8 @@ const FindOut = () => {
             </div>
           </div>
           {/* right */}
-          <div className="col-span-4">
-            <h1 className="text-white font-archivoExpandedRegular text-[64px] leading-tight">
+          <div className="md:col-span-4">
+            <h1 className="text-white font-archivoExpandedRegular md:text-[64px] text-3xl leading-tight">
               Find out about the sales at your local shop
             </h1>
             <button className="uppercase px-[41px] py-[22px] bg-white font-archivoExpandedSemiBold text-sm rounded-lg mt-10 text-[#1A1A1A] hover:bg-[#888888] transition-colors ease-in-out duration-500">

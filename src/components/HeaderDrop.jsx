@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
 
-import image01 from "../assets/images/image01.jpg";
-import image02 from "../assets/images/image02.jpg";
-import image03 from "../assets/images/image03.jpg";
-import image04 from "../assets/images/image04.jpg";
-import image05 from "../assets/images/image05.jpg";
+import hoddieImg from "../assets/images/hoddieImg.jpg";
+import sweatShirtImg from "../assets/images/sweatShirtImg.jpg";
+import shirtImg from "../assets/images/shirtImg.jpg";
+import tShirtImg from "../assets/images/tShirtImg.jpg";
+import jacketImg from "../assets/images/jacketImg.jpg";
 import default_image from "../assets/images/default-image.jpg";
 
+import { motion } from "framer-motion";
+
 const listItem = ["Hoddies", "Sweatshirts", "Shirts", "T-Shirts", "Jacket"];
-const sideImage = [image01, image02, image05, image04, image03, default_image];
+const sideImage = [
+  hoddieImg,
+  sweatShirtImg,
+  shirtImg,
+  tShirtImg,
+  jacketImg,
+  default_image,
+];
 
 const HeaderDrop = () => {
   const [position, setPosition] = useState(window.pageYOffset);
@@ -27,14 +36,34 @@ const HeaderDrop = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   });
+  
 
   const cls = visible ? "opacity-100" : "opacity-0";
   return (
-    <div
-      className={`bg-[#E4E1DE] absolute inset-0 ${cls} z-30 transition-opacity duration-700 ease-in-out`}
+    <motion.div
+      initial={{ height: "0%" }}
+      animate={{ height: "100%" }}
+      transition={{ ease: "easeInOut", duration: 1 }}
+      className={`bg-[#E4E1DE] absolute inset-0 ${cls} z-30 transition-opacity duration-700 ease-in-out pt-[70px] md:p-0`}
     >
-      <div className="max-w-[1350px] mx-auto pt-[126px] px-[28px] flex ">
-        <ul className="w-1/2 space-y-8 font-archivoExpandedSemiBold relative">
+      <div
+        className="absolute bg-gray-500 inset-0 left-[50%] grayscale bg-cover bg-center transition-all duration-500 ease-in-out hidden md:block"
+        style={{ backgroundImage: `url(${sideImage[activeImage]})` }}
+      />
+      <motion.div
+        initial={{ height: "0%" }}
+        animate={{ height: "200px" }}
+        // transition={{ duration: 0.8 }}
+        className="bg-gray-500 w-full h-[200px] grayscale bg-cover bg-center transition-all duration-500 ease-in-out block md:hidden"
+        style={{ backgroundImage: `url(${sideImage[activeImage]})` }}
+      />
+      <motion.div
+        initial={{ height: "0%" ,opacity:0}}
+        animate={{ height: "100%" ,opacity:1}}
+        transition={{ duration: 1 }}
+        className="max-w-[1350px] mx-auto md:pt-[126px] pt-[50px] px-[28px] flex "
+      >
+        <ul className="md:w-1/2 md:space-y-8 space-y-4 font-archivoExpandedSemiBold relative mx-auto md:m-0">
           {listItem.map((item, index) => (
             <ListItem
               key={"list" + index}
@@ -45,12 +74,8 @@ const HeaderDrop = () => {
           ))}
         </ul>
         <div className="border-t-2 border-black"></div>
-        <div
-          className="absolute bg-gray-500 inset-0 left-[50%] grayscale bg-cover bg-center transition-all duration-500 ease-in-out"
-          style={{ backgroundImage: `url(${sideImage[activeImage]})` }}
-        />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -61,7 +86,9 @@ const ListItem = ({ index, item, setActiveImage }) => (
     onMouseLeave={() => setActiveImage(5)}
   >
     0{index + 1}.
-    <span className="font-archivoExpandedRegular text-6xl">{item}</span>
+    <span className="font-archivoExpandedRegular md:text-6xl text-3xl">
+      {item}
+    </span>
   </li>
 );
 

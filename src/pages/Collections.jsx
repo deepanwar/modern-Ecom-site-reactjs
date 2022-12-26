@@ -1,37 +1,37 @@
 import React from "react";
 
-import image01 from "../assets/images/image01.jpg";
-import image02 from "../assets/images/image02.jpg";
-import image03 from "../assets/images/image03.jpg";
-import image04 from "../assets/images/image04.jpg";
-import image05 from "../assets/images/image05.jpg";
+import hoddieImg from "../assets/images/hoddieImg.jpg";
+import sweatShirtImg from "../assets/images/sweatShirtImg.jpg";
+import shirtImg from "../assets/images/shirtImg.jpg";
+import tShirtImg from "../assets/images/tShirtImg.jpg";
+import jacketImg from "../assets/images/jacketImg.jpg";
 
 const collections = [
   {
     title: "Hoodies",
-    image: image01,
+    image: hoddieImg,
   },
   {
     title: "Sweatshirts",
-    image: image05,
+    image: sweatShirtImg,
   },
   {
     title: "Shirts",
-    image: image02,
+    image: shirtImg,
   },
   {
     title: "T-Shirts",
-    image: image03,
+    image: tShirtImg,
   },
   {
     title: "Jackets",
-    image: image04,
+    image: jacketImg,
   },
 ];
 
 const Collections = () => {
   return (
-    <div className="md:px-6 px-2 py-[70px] min-h-screen w-full">
+    <div className="md:px-6 px-4 py-[70px] min-h-screen w-full">
       <div className="py-10 grid md:grid-cols-5 gap-2 grid-cols-1  ">
         {/* {collections.map((item)=>(<h1>mohan</h1>))} */}
         {collections.map((item, i) => (

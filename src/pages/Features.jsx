@@ -6,7 +6,7 @@ import heroImage from "../assets/images/hero-crop.jpg";
 
 const Features = () => {
   return (
-    <div className="max-w-[1350px] mx-auto px-7 py-12 ">
+    <div className="max-w-[1350px] mx-auto md:px-6 px-2 py-12 ">
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -16,9 +16,9 @@ const Features = () => {
         <h1 className="text-[64px] font-archivoExpandedMedium">
           Features of our products
         </h1>
-        <div className="py-12 h-[95vh] flex">
+        <div className="py-12 md:h-[95vh] flex md:flex-row flex-col w-full">
           {/* left */}
-          <div className="p-10 bg-[#1a1a1a] w-1/2 h-full flex justify-between items-center flex-col">
+          <div className="p-10 bg-[#1a1a1a] md:w-1/2 h-full flex justify-between items-center flex-col">
             <h3 className="text-[36px] text-white font-archivoExpandedRegular mt-5 mb-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </h3>
@@ -30,7 +30,7 @@ const Features = () => {
           </div>
           {/* right */}
           <div
-            className="w-1/2 h-full relative bg-cover bg-center"
+            className="md:w-1/2 h-[60vh] md:h-full relative bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
           >
             {/* <img src={heroImage} alt="" className="h-full w-full " /> */}
