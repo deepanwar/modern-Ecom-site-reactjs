@@ -1,30 +1,30 @@
-import React from "react";
-import Card from "../components/Card";
-import Cloth01 from "../assets/images/cloth_img1.png";
-import Cloth02 from "../assets/images/cloth_img2.png";
-import arrowIcon from "../assets/svgs/arrow-icon.svg";
-import { motion } from "framer-motion";
+import React from 'react';
+import Card from '../components/Card';
+import Cloth01 from '../assets/images/cloth_img1.png';
+import Cloth02 from '../assets/images/cloth_img2.png';
+import arrowIcon from '../assets/svgs/arrow-icon.svg';
+import { motion } from 'framer-motion';
 
-import { fadeIn, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer } from '../../utils/motion';
 
 const products = [
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
@@ -41,7 +41,7 @@ const Trending = () => {
         viewport={{ once: false, amount: 0.25 }}
       >
         {/* left */}
-        <motion.div variants={fadeIn({ direction: "right" })}>
+        <motion.div variants={fadeIn({ direction: 'right' })}>
           <h1 className="lg:text-[100px] text-left text-4xl md:text-7xl">
             SEASONS'S
           </h1>
@@ -50,7 +50,7 @@ const Trending = () => {
         {/* right */}
         <motion.div
           // className="text-[100px] text-white text-right flex justify-end items-center h-[100px] overflow-hidden"
-          variants={fadeIn({ direction: "left" })}
+          variants={fadeIn({ direction: 'left' })}
         >
           <h1 className="lg:text-[100px] text-4xl md:text-7xl text-white text-right">
             TRENDING
@@ -63,13 +63,13 @@ const Trending = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        variants={fadeIn({ direction: "up" })}
+        variants={fadeIn({ direction: 'up' })}
       >
         <p className="max-w-[600px] font-archivoExpandedMedium text-[#1a1a1a] mb-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta feugiat
-          etiam aliquet aliquet tellus vel. Et maecenas id bibendum sit. Augue
-          nulla tortor faucibus nunc. Urna massa mattis faucibus velit sed
-          volutpat sodales. Quis at mi amet, ipsum.
+          Embrace the sun-soaked days with our summer essentials. From breezy
+          dresses to trendy swimwear, we have everything you need to stay cool
+          and fashionable. Make a splash with vibrant colors and playful prints.
+          Shop now for the perfect summer look!
         </p>
         <button className="text-sm font-archivoExpandedMedium uppercase flex items-center gap-2 cursor-pointer self-end">
           view all
@@ -82,7 +82,7 @@ const Trending = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        variants={fadeIn({ direction: "up", duration: 0.5 })}
+        variants={fadeIn({ direction: 'up', duration: 0.5 })}
       >
         {products.map((item, i) => (
           <Card

@@ -1,45 +1,45 @@
-import React, { useEffect, useState } from "react";
-import Card from "../components/Card";
-import Cloth01 from "../assets/images/cloth_img1.png";
-import Cloth02 from "../assets/images/cloth_img2.png";
-import arrowIcon from "../assets/svgs/arrow-icon.svg";
+import React, { useEffect, useState } from 'react';
+import Card from '../components/Card';
+import Cloth01 from '../assets/images/cloth_img1.png';
+import Cloth02 from '../assets/images/cloth_img2.png';
+import arrowIcon from '../assets/svgs/arrow-icon.svg';
 
-import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../../utils/motion";
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer } from '../../utils/motion';
 
 const products = [
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
   {
-    title: "crew new tshirt",
+    title: 'crew new tshirt',
     image1: Cloth01,
     image2: Cloth02,
   },
@@ -56,14 +56,14 @@ const NewProducts = () => {
         viewport={{ once: false, amount: 0.25 }}
       >
         {/* left */}
-        <motion.div variants={fadeIn({ direction: "right", delay: 0.2 })}>
+        <motion.div variants={fadeIn({ direction: 'right', delay: 0.2 })}>
           <h1 className="lg:text-[100px] text-left text-4xl md:text-7xl">
             NEWEST
           </h1>
         </motion.div>
 
         {/* right */}
-        <motion.div variants={fadeIn({ direction: "left", delay: 0.2 })}>
+        <motion.div variants={fadeIn({ direction: 'left', delay: 0.2 })}>
           <h1 className="lg:text-[100px] text-white text-right text-4xl md:text-7xl">
             PRODUCTS
           </h1>
@@ -74,13 +74,13 @@ const NewProducts = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        variants={fadeIn({ direction: "up" })}
+        variants={fadeIn({ direction: 'up' })}
       >
         <p className="max-w-[600px] font-archivoExpandedMedium text-[#1a1a1a] mb-3 ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta feugiat
-          etiam aliquet aliquet tellus vel. Et maecenas id bibendum sit. Augue
-          nulla tortor faucibus nunc. Urna massa mattis faucibus velit sed
-          volutpat sodales. Quis at mi amet, ipsum.
+          Our newest t-shirts are designed with the latest fashion trends in
+          mind. From vibrant colors to eye-catching patterns, these tees will
+          elevate your casual style to new heights. Experience comfort and style
+          combined in one package.
         </p>
         <button className="text-sm font-archivoExpandedMedium uppercase flex items-center gap-2 cursor-pointer self-end">
           view all
@@ -93,7 +93,7 @@ const NewProducts = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.02 }}
-        variants={fadeIn({ direction: "up", delay: 0.05 })}
+        variants={fadeIn({ direction: 'up', delay: 0.05 })}
       >
         {products.map((item, i) => (
           <Card
