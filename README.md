@@ -1,7 +1,8 @@
-# Modern E-Commerce Site [Live Link](https://stirring-vacherin-dc86f6.netlify.app)
+# Milano
+
+Discover Milano, your one-stop shop for trendy clothing. Shop our collection of hoodies, sweatshirts, shirts, t-shirts, and jackets to elevate your style. Embrace fashion and comfort with our high-quality pieces. Upgrade your wardrobe with Milano today.
+
 ## Technologies Used
 - React JS
 - Tailwind CSS
 
-##### _Not fully responsive yet._
-Basically it is an online cloth selling platform.
