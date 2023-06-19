@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "archivoExpandedBold";
-  src: url("./assets/font/Archivo_Expanded-Bold.ttf");
+@font-face {
+  font-family: 'archivoExpandedBold';
+  src: url('./assets/font/Archivo_Expanded-Bold.ttf');
 }
 @font-face {
-  font-family: "archivoExpandedSemiBold";
-  src: url("./assets/font/Archivo_Expanded-SemiBold.ttf");
+  font-family: 'archivoExpandedSemiBold';
+  src: url('./assets/font/Archivo_Expanded-SemiBold.ttf');
 }
 @font-face {
-  font-family: "archivoExpandedRegular";
-  src: url("./assets/font/Archivo_Expanded-Regular.ttf");
+  font-family: 'archivoExpandedRegular';
+  src: url('./assets/font/Archivo_Expanded-Regular.ttf');
 }
 @font-face {
-  font-family: "archivoExpandedMedium";
-  src: url("./assets/font/Archivo_Expanded-Medium.ttf");
+  font-family: 'archivoExpandedMedium';
+  src: url('./assets/font/Archivo_Expanded-Medium.ttf');
 }
 @font-face {
-  font-family: "archivoExpandedLight";
-  src: url("./assets/font/Archivo_Expanded-Light.ttf");
-} */
+  font-family: 'archivoExpandedLight';
+  src: url('./assets/font/Archivo_Expanded-Light.ttf');
+}
 
 .apnaContainer {
   @apply max-w-[1350px] mx-auto;
